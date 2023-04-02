@@ -15,3 +15,4 @@ if __name__ == '__main__':
     with urllib.request.urlopen(req) as r:
         html = r.read()
         print('{}'.format(html.decode('utf-8')))
+        

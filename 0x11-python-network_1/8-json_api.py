@@ -16,3 +16,4 @@ if __name__ == '__main__':
             print("[{}] {}".format(d.get("id"), d.get("name")))
     except ValueError:
         print("Not a valid JSON")
+        
