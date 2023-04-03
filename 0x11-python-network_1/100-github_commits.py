@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-""" Github commits code challenge"""
+"""Fetch
+https://intranet.hbtn.io/status
+using urlib package
+"""
 
-import requests
-from sys import argv
+import urllib.request
 
 if __name__ == '__main__':
-    url = "https://api.github.com/repos/{}/{}commits"\
-          .format(argv[2], argv[1])
-    r = requests.get(url)
-    commits = r.json()
-
-    for commit in commits[:10]:
-        print(commit.get('sha'), end=': ')
-        print(commit.get('commit').get('author').get('name'))
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as request:
+        response = request.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(response)))
+        print("\t- content: {}".format(response))
+        print("\t- utf8 content: {}".format(response.decode('UTF-8')))
         
