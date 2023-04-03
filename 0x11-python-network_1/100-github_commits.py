@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Fetch
 https://intranet.hbtn.io/status
-using urlib package
+using urlib packages
 """
 
 import urllib.request
